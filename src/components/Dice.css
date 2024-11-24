@@ -1,0 +1,18 @@
+.dice-container {
+  margin: 20px;
+}
+
+.dice-button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #ffd700; /* Gold */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dice-button:disabled {
+  background-color: #d3d3d3; /* Disabled Gray */
+  cursor: not-allowed;
+}

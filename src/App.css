@@ -1,0 +1,285 @@
+/* Main app container */
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background: url("wooden-background.jpg"); /* Add wooden background */
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Heading styles */
+h1 {
+  font-size: 2.8rem;
+  margin: 20px 0;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  font-family: "Roboto", sans-serif;
+}
+
+/* Game container */
+.game-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  gap: 30px; /* Increased gap for spacing */
+}
+
+/* Sidebar styles */
+.sidebar {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 2px solid #b5651d;
+  border-radius: 12px; /* Softer corners */
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 400px; /* Wider sidebar */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.sidebar h3 {
+  font-size: 1.4rem;
+  color: #333;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.player-info {
+  margin-bottom: 15px;
+  width: 100%; /* Full width inside sidebar */
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Dice container */
+.dice-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dice-button {
+  font-size: 1.5rem;
+  padding: 15px 30px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 10px; /* Larger rounded button */
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.dice-button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.dice-button:hover {
+  background-color: #0056b3;
+}
+
+.reset-button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #dc3545;
+  border: none;
+  border-radius: 8px; /* Slightly larger rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.reset-button:hover {
+  background-color: #c82333;
+}
+
+/* Player selection container */
+/* Player selection container */
+.player-selection {
+  text-align: center;
+  padding: 30px;
+  border: 3px solid #b5651d; /* Matches the wooden theme */
+  background: linear-gradient(135deg, #ffe4b5, #f9d29d); /* Gradient background */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Softer shadow */
+  max-width: 700px;
+  width: 90%; /* Responsive width */
+  font-family: "Roboto", sans-serif;
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust position */
+}
+
+/* Heading inside the player-selection box */
+.player-selection h1 {
+  font-size: 2.8rem;
+  color: #8b4513; /* Dark brown text for the wooden theme */
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.player-selection h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+/* Buttons for player selection */
+.player-selection .buttons {
+  display: flex;
+  justify-content: space-evenly; /* Evenly spaced buttons */
+  gap: 20px; /* Space between buttons */
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+.player-selection .buttons button {
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  min-width: 120px; /* Uniform button size */
+}
+
+.player-selection .buttons button:hover {
+  background-color: #0056b3;
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.player-selection .buttons button.selected {
+  background-color: #28a745;
+  color: #fff;
+  border: 2px solid #218838;
+}
+
+/* Start Game Button */
+.start-button {
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  color: #fff;
+  background-color: #28a745;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.start-button:hover {
+  background-color: #218838;
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Snakes and Ladders legend */
+.legend {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 2px solid #b5651d;
+  border-radius: 12px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 150px;
+  font-family: "Roboto", sans-serif;
+}
+
+.legend h4 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.legend .item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 5px 0;
+}
+
+.legend .item span {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.legend .snake {
+  background-color: red;
+}
+
+.legend .ladder {
+  background-color: green;
+}
+
+/* Board container */
+.board-container {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  border: 2px solid #b5651d;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  width: 100%;
+  height: 100%;
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.cell:nth-child(odd) {
+  background-color: #f9e4b7;
+}
+
+.cell:nth-child(even) {
+  background-color: #ffe9c8;
+}
+
+.player {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid black;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease-in-out; /* Smooth animation */
+}
+.dice-gif {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.dice-result {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
